@@ -18,7 +18,11 @@
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-indigo-600 tracking-wide">Shabeer</h1>
+      <div class="flex items-center gap-3">
+        <img src="/profile.jpeg" alt="Mohammed Shabeer"
+          class="w-12 h-12 rounded-full border-2 border-indigo-500 shadow-lg ring-2 ring-indigo-200 object-cover" />
+        <h1 class="text-2xl font-bold text-indigo-600 tracking-wide">Shabeer</h1>
+      </div>
       <!-- Hamburger button for mobile -->
       <button class="md:hidden text-indigo-600 focus:outline-none" aria-label="Open Menu" onclick="toggleNav()">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -28,6 +32,7 @@
       <nav id="main-nav"
         class="space-x-6 font-medium text-gray-700 md:flex hidden md:static md:space-x-6 md:bg-transparent md:shadow-none absolute top-full left-0 w-full bg-white shadow-lg md:w-auto md:mt-0 mt-2 rounded-b-xl z-40">
         <a href="#about" class="block md:inline hover:text-indigo-600 transition px-6 py-3 md:p-0">About</a>
+        <a href="#experience" class="block md:inline hover:text-indigo-600 transition px-6 py-3 md:p-0">Experience</a>
         <a href="#skills" class="block md:inline hover:text-indigo-600 transition px-6 py-3 md:p-0">Skills</a>
         <a href="#projects" class="block md:inline hover:text-indigo-600 transition px-6 py-3 md:p-0">Projects</a>
         <a href="#contact" class="block md:inline hover:text-indigo-600 transition px-6 py-3 md:p-0">Contact</a>
@@ -47,9 +52,44 @@
   <section id="about" class="bg-white py-20">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h3 class="text-3xl font-semibold mb-6 text-gray-900">About Me</h3>
-      <p class="text-gray-700 leading-relaxed text-lg"> With proven experience in Abu Dhabi delivering end-to-end
-        projects — from requirements and development to deployment and client training — I bring independence,
-        ownership, and flexibility that remote-first companies need. </p>
+      <p class="text-gray-700 leading-relaxed text-lg"> With proven experience in UAE delivering end-to-end projects,
+        from requirements and development to deployment and client training. I bring independence, ownership, and
+        flexibility that remote-first companies need. <br><br>
+        <span class="inline-block mt-4 text-indigo-600 font-semibold text-xl">Nationality: Indian 🇮🇳</span>
+      </p>
+    </div>
+  </section>
+  <!-- Solution Approach -->
+  <section id="solution" class="py-20 bg-indigo-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-8 text-center text-indigo-700">How I Propose & Design Software Solutions</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <h4 class="font-semibold text-lg mb-3 text-indigo-600">1. Business Analysis</h4>
+          <ul class="list-disc ml-5 text-gray-700 text-base mb-2">
+            <li>Observe business workflows, pain points, and goals.</li>
+            <li>Engage with stakeholders to understand requirements.</li>
+            <li>Document current processes and identify areas for improvement.</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <h4 class="font-semibold text-lg mb-3 text-purple-600">2. Solution Proposal</h4>
+          <ul class="list-disc ml-5 text-gray-700 text-base mb-2">
+            <li>Recommend the right software: web app, mobile app, ERP, API, automation, etc.</li>
+            <li>Align technology choices with business needs and budget.</li>
+            <li>Present a clear roadmap and deliverables.</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg md:col-span-2">
+          <h4 class="font-semibold text-lg mb-3 text-green-600">3. Architecture Design</h4>
+          <ul class="list-disc ml-5 text-gray-700 text-base mb-2">
+            <li>Design scalable, secure, and maintainable system architecture.</li>
+            <li>Define frontend, backend, database, integrations, and infrastructure.</li>
+            <li>Use modern stacks: Laravel, Vue, Flutter, Python, Linux, Tailwind CSS, etc.</li>
+            <li>Plan for deployment, monitoring, and future growth.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
   <!-- Experience Timeline -->
@@ -152,31 +192,80 @@
   <section id="skills" class="py-20 bg-gray-50">
     <div class="max-w-6xl mx-auto px-6">
       <h3 class="text-3xl font-semibold mb-12 text-center text-gray-900">Skills</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div
-          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-indigo-600 font-semibold">
-          Laravel</div>
-        <div
-          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-green-500 font-semibold">
-          Vue.js</div>
-        <div
-          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-blue-500 font-semibold">
-          Flutter</div>
-        <div
-          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-yellow-500 font-semibold">
-          Python</div>
-        <div
-          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-indigo-400 font-semibold">
-          API Development</div>
-        <div
-          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-red-400 font-semibold">
-          DevOps (Git, VPS)</div>
-        <div
-          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-pink-500 font-semibold">
-          Client Training</div>
-        <div
-          class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-gray-700 font-semibold">
-          Agile Workflow</div>
+      <!-- Tech Stack Grid -->
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Backend -->
+        <div>
+          <h4 class="text-xl font-semibold text-indigo-700 mb-6 text-center">Backend</h4>
+          <div class="grid grid-cols-2 gap-6">
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-indigo-600 font-semibold text-center">
+              Laravel </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-yellow-500 font-semibold text-center">
+              Python </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-orange-600 font-semibold text-center">
+              Java </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-indigo-400 font-semibold text-center">
+              API Development </div>
+          </div>
+        </div>
+        <!-- Frontend -->
+        <div>
+          <h4 class="text-xl font-semibold text-green-700 mb-6 text-center">Frontend</h4>
+          <div class="grid grid-cols-2 gap-6">
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-green-500 font-semibold text-center">
+              Vue.js </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-cyan-500 font-semibold text-center">
+              Tailwind CSS </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-emerald-600 font-semibold text-center">
+              Nuxt.js </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-sky-600 font-semibold text-center">
+              Next.js </div>
+          </div>
+        </div>
+        <!-- Mobile -->
+        <div>
+          <h4 class="text-xl font-semibold text-blue-700 mb-6 text-center">Mobile</h4>
+          <div class="grid grid-cols-1 gap-6">
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-blue-500 font-semibold text-center">
+              Flutter </div>
+          </div>
+        </div>
+        <!-- DevOps -->
+        <div>
+          <h4 class="text-xl font-semibold text-red-700 mb-6 text-center">DevOps & Tools</h4>
+          <div class="grid grid-cols-2 gap-6">
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-gray-800 font-semibold text-center">
+              Linux & CLI </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-red-400 font-semibold text-center">
+              Git, VPS </div>
+          </div>
+        </div>
+        <!-- Soft Skills -->
+        <div class="md:col-span-2">
+          <h4 class="text-xl font-semibold text-purple-700 mb-6 text-center">Soft Skills</h4>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-pink-500 font-semibold text-center">
+              Client Training </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-gray-700 font-semibold text-center">
+              Agile Workflow </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition text-blue-700 font-semibold text-center">
+              Communication </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -256,20 +345,65 @@
       </div>
     </div>
   </section>
+  <!-- Trust & Ethics -->
+  <section id="ethics" class="py-24 bg-gradient-to-br from-indigo-50 to-purple-50">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h3 class="text-4xl font-extrabold mb-6 text-indigo-700">Trust &amp; Ethics</h3>
+      <p class="text-gray-700 text-lg md:text-xl mb-14 max-w-3xl mx-auto leading-relaxed"> I believe strong values build
+        strong software. My work is guided by integrity, transparency, and a genuine commitment to deliver reliable
+        solutions while building long-term trust with clients. </p>
+      <div class="grid md:grid-cols-2 gap-10 text-left">
+        <!-- Core Values -->
+        <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h4 class="flex items-center text-xl font-semibold text-indigo-600 mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 4.354l1.528 3.098 3.428.498-2.478 2.415.585 3.413L12 12.77l-3.063 1.608.585-3.413-2.478-2.415 3.428-.498L12 4.354z" />
+            </svg> My Core Values
+          </h4>
+          <ul class="space-y-3 text-gray-700 text-base">
+            <li>✔ Integrity in every project</li>
+            <li>✔ Respect for confidentiality & privacy</li>
+            <li>✔ Transparency in communication</li>
+            <li>✔ Commitment to quality & reliability</li>
+            <li>✔ Lifelong learning & improvement</li>
+          </ul>
+        </div>
+        <!-- Professional Standards -->
+        <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h4 class="flex items-center text-xl font-semibold text-purple-600 mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-purple-500" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12h6m-6 4h6m2 4H7a2 2 0 01-2-2V6a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2z" />
+            </svg> Professional Standards
+          </h4>
+          <ul class="space-y-3 text-gray-700 text-base">
+            <li>✔ Write secure, maintainable, clean code</li>
+            <li>✔ Uphold honesty in deadlines & deliverables</li>
+            <li>✔ Follow industry best practices</li>
+            <li>✔ Encourage teamwork & mentorship</li>
+            <li>✔ Take full responsibility for outcomes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Contact -->
   <section id="contact" class="py-20 bg-gradient-to-r from-indigo-50 to-purple-50">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h3 class="text-3xl font-semibold mb-6 text-gray-900">Let’s Connect</h3>
       <p class="mb-8 text-gray-700 text-lg">I’m open for remote opportunities. Let’s build something impactful together.
       </p>
-      <a href="mailto:youremail@example.com"
+      <a href="mailto:shabi.developer@gmail.com"
         class="bg-indigo-600 text-white px-8 py-4 rounded-xl shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition">
         Email Me </a>
     </div>
   </section>
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-400 text-center py-8">
-    <p>© 2025 Mohammed Shabeer. Built with ❤️ using Tailwind CSS.</p>
+    <p>© 2025 Mohammed Shabeer</p>
   </footer>
 </body>
 
