@@ -27,15 +27,16 @@
         extend: {
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
-            display: ['Space Grotesk', 'sans-serif'],
+            display: ['Outfit', 'Space Grotesk', 'sans-serif'],
           },
           colors: {
-            primary: '#4f46e5',
-            secondary: '#ec4899',
-            dark: '#111827',
+            primary: '#6366f1',
+            secondary: '#d946ef',
+            dark: '#0f172a',
+            surface: '#1e293b',
           },
           animation: {
-            blob: "blob 7s infinite",
+            blob: "blob 10s infinite",
           },
           keyframes: {
             blob: {
@@ -73,7 +74,7 @@
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden selection:bg-indigo-500 selection:text-white">
+<body class="bg-slate-950 text-slate-200 antialiased overflow-x-hidden selection:bg-indigo-500 selection:text-white">
 
   <!-- Custom Cursor -->
   <div class="cursor-dot hidden md:block"></div>
@@ -81,19 +82,18 @@
 
   <!-- Floating Nav -->
   <nav
-    class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl glass-effect rounded-full px-6 py-3 flex justify-between items-center shadow-lg transition-all duration-300">
-    <a href="#"
-      class="font-display font-bold text-xl tracking-tight text-slate-900 hover:text-primary transition-colors">
+    class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl glass-effect rounded-full px-6 py-3 flex justify-between items-center transition-all duration-300 border border-white/10">
+    <a href="#" class="font-display font-bold text-xl tracking-tight text-white hover:text-primary transition-colors">
       Mohammed<span class="text-primary">.</span>
     </a>
 
     <!-- Desktop Menu -->
-    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-      <a href="#about" class="hover:text-primary transition-colors">About</a>
-      <a href="#projects" class="hover:text-primary transition-colors">Work</a>
-      <a href="#skills" class="hover:text-primary transition-colors">Stack</a>
+    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+      <a href="#about" class="hover:text-white transition-colors">About</a>
+      <a href="#projects" class="hover:text-white transition-colors">Work</a>
+      <a href="#skills" class="hover:text-white transition-colors">Stack</a>
       <a href="#contact"
-        class="px-5 py-2 bg-slate-900 text-white rounded-full hover:bg-primary transition-all shadow-md hover:shadow-lg">Let's
+        class="px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-500 transition-all shadow-lg hover:shadow-indigo-500/30">Let's
         Talk</a>
     </div>
 
@@ -107,7 +107,7 @@
 
   <!-- Mobile Menu Dropdown -->
   <div id="main-nav"
-    class="fixed inset-0 bg-white/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center space-y-8 text-2xl font-bold font-display hidden transition-all">
+    class="fixed inset-0 bg-slate-900/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center space-y-8 text-2xl font-bold font-display hidden transition-all text-white">
     <button class="absolute top-6 right-6 p-2" onclick="toggleNav()">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -133,20 +133,20 @@
       <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div data-aos="fade-right">
           <div
-            class="inline-block px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-sm font-semibold mb-6">
+            class="inline-block px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm font-semibold mb-6">
             👋 Available for new projects
           </div>
-          <h1 class="font-display text-5xl md:text-7xl font-extrabold leading-tight text-slate-900 mb-6">
+          <h1 class="font-display text-5xl md:text-7xl font-extrabold leading-tight text-white mb-6">
             Building digital <br>
             <span class="gradient-text typing-cursor" id="typing-text"></span>
           </h1>
-          <p class="text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
-            I'm <strong class="text-slate-900">Mohammed Shabeer</strong>, a Full Stack & DevOps Engineer.
+          <p class="text-xl text-slate-400 mb-8 max-w-lg leading-relaxed">
+            I'm <strong class="text-white">Mohammed Shabeer</strong>, a Full Stack & DevOps Engineer.
             I transform complex requirements into scalable, user-centric seamless applications.
           </p>
           <div class="flex flex-wrap gap-4">
             <a href="#projects"
-              class="btn-primary px-8 py-4 rounded-full font-bold shadow-lg inline-flex items-center justify-center">View
+              class="btn-primary px-8 py-4 rounded-full font-bold shadow-lg inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-500">View
               My Work</a>
             <a href="https://github.com" target="_blank"
               class="btn-secondary px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2">
@@ -165,26 +165,28 @@
           </div>
           <!-- Decorative elements -->
           <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border-2 border-indigo-200 rounded-3xl -rotate-3 -z-10 bg-indigo-50/50">
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border-2 border-indigo-500/30 rounded-3xl -rotate-3 -z-10 bg-indigo-500/5">
           </div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-white/50 backdrop-blur-sm">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="font-display text-3xl font-bold mb-8">About Me</h2>
-        <p class="text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
+    <section id="about" class="py-24 relative">
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <h2 class="font-display text-3xl font-bold mb-8 text-white">About Me</h2>
+        <p class="text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto">
           With proven experience delivering end-to-end projects—from requirements gathering and development to
           deployment and client training—I bring independence, ownership, and flexibility that remote-first companies
           need.
         </p>
         <div class="mt-8 flex justify-center gap-4">
-          <span class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full font-semibold border border-indigo-100">
+          <span
+            class="px-4 py-2 bg-indigo-500/10 text-indigo-300 rounded-full font-semibold border border-indigo-500/20">
             📍 Based in UAE
           </span>
-          <span class="px-4 py-2 bg-purple-50 text-purple-700 rounded-full font-semibold border border-purple-100">
+          <span
+            class="px-4 py-2 bg-purple-500/10 text-purple-300 rounded-full font-semibold border border-purple-500/20">
             🇮🇳 Indian
           </span>
         </div>
@@ -195,8 +197,8 @@
     <section id="skills" class="py-24">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">My Tech Arsenal 🛠️</h2>
-          <p class="text-slate-600 max-w-2xl mx-auto">I always pick the right tool for the job. Here are the
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4 text-white">My Tech Arsenal 🛠️</h2>
+          <p class="text-slate-400 max-w-2xl mx-auto">I always pick the right tool for the job. Here are the
             technologies effectively used in production.</p>
         </div>
 
@@ -234,36 +236,44 @@
           </div>
 
           <!-- Frontend -->
-          <div class="modern-card tilt-card col-span-2 md:col-span-2 bg-white" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-xl font-bold font-display mb-4 text-slate-800 tilt-content">Frontend & Mobile</h3>
+          <div class="modern-card tilt-card col-span-2 md:col-span-2 text-white" data-aos="fade-up"
+            data-aos-delay="100">
+            <h3 class="text-xl font-bold font-display mb-4 text-white tilt-content">Frontend & Mobile</h3>
             <div class="flex flex-wrap gap-2 tilt-content">
-              <span class="px-3 py-1 bg-green-100 text-green-700 rounded-lg text-sm font-semibold">Vue.js</span>
-              <span class="px-3 py-1 bg-sky-100 text-sky-700 rounded-lg text-sm font-semibold">React</span>
-              <span class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-lg text-sm font-semibold">Tailwind</span>
-              <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-lg text-sm font-semibold">Flutter</span>
-              <span class="px-3 py-1 bg-black text-white rounded-lg text-sm font-semibold">Next.js</span>
+              <span
+                class="px-3 py-1 bg-green-500/20 text-green-300 border border-green-500/20 rounded-lg text-sm font-semibold">Vue.js</span>
+              <span
+                class="px-3 py-1 bg-sky-500/20 text-sky-300 border border-sky-500/20 rounded-lg text-sm font-semibold">React</span>
+              <span
+                class="px-3 py-1 bg-cyan-500/20 text-cyan-300 border border-cyan-500/20 rounded-lg text-sm font-semibold">Tailwind</span>
+              <span
+                class="px-3 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/20 rounded-lg text-sm font-semibold">Flutter</span>
+              <span
+                class="px-3 py-1 bg-white/10 text-white border border-white/10 rounded-lg text-sm font-semibold">Next.js</span>
             </div>
           </div>
 
           <!-- DevOps -->
           <div
-            class="modern-card tilt-card bg-orange-50 border-orange-100 flex flex-col justify-center items-center text-center hover:border-orange-300 transition-colors"
+            class="modern-card tilt-card lg:col-span-1 flex flex-col justify-center items-center text-center hover:border-orange-500/50 transition-colors"
             data-aos="fade-up" data-aos-delay="200">
             <div class="tilt-content">
-              <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-2xl mb-3 mx-auto">
+              <div
+                class="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center text-2xl mb-3 mx-auto">
                 🦊</div>
-              <h4 class="font-bold text-slate-800">GitLab & CI/CD</h4>
+              <h4 class="font-bold text-white">GitLab & CI/CD</h4>
             </div>
           </div>
 
           <!-- Tools -->
           <div
-            class="modern-card tilt-card bg-blue-50 border-blue-100 flex flex-col justify-center items-center text-center hover:border-blue-300 transition-colors"
+            class="modern-card tilt-card lg:col-span-1 flex flex-col justify-center items-center text-center hover:border-blue-500/50 transition-colors"
             data-aos="fade-up" data-aos-delay="300">
             <div class="tilt-content">
-              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl mb-3 mx-auto">🐳
+              <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-2xl mb-3 mx-auto">
+                🐳
               </div>
-              <h4 class="font-bold text-slate-800">Docker & VPS</h4>
+              <h4 class="font-bold text-white">Docker & VPS</h4>
             </div>
           </div>
         </div>
@@ -271,316 +281,495 @@
     </section>
 
     <!-- Selected Projects -->
-    <section id="projects" class="py-24 bg-white">
+    <section id="projects" class="py-24 relative">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="flex justify-between items-end mb-16">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
           <div data-aos="fade-right">
-            <h2 class="font-display text-4xl font-bold mb-4">Featured Work</h2>
-            <p class="text-slate-600">A selection of projects I'm proud of.</p>
+            <h2 class="font-display text-4xl font-bold mb-4 text-white">Featured Work</h2>
+            <p class="text-slate-400">A selection of projects I've built with passion and precision.</p>
           </div>
-          <a href="https://github.com"
-            class="hidden md:flex items-center gap-2 text-indigo-600 font-semibold hover:gap-3 transition-all">
-            View all on GitHub <span>→</span>
+
+          <div class="filter-container mt-8 md:mt-0" data-aos="fade-left">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="crm">Enterprise</button>
+            <button class="filter-btn" data-filter="travel">Travel</button>
+            <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+            <button class="filter-btn" data-filter="education">Education</button>
+            <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+            <button class="filter-btn" data-filter="gamification">Games</button>
+            <button class="filter-btn" data-filter="services">Services</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+          <!-- Project: NFC Team Apps -->
+          <div class="project-item project-card" data-category="gamification" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">NFC Team Apps</h3>
+                <span class="tech-badge bg-purple-500/10 text-purple-400 border border-purple-500/20">Flutter</span>
+              </div>
+              <p class="text-slate-400 font-medium">Event registration systems with NFC scoring and real-time leadership
+                boards.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Client</div>
+                <div class="value">The Game Arcade</div>
+              </div>
+              <a href="https://nfc-admin.thegamearcade.com" target="_blank" class="footer-action">Live Demo</a>
+            </div>
+          </div>
+
+          <!-- Project: Al Yalayis Portal -->
+          <div class="project-item project-card" data-category="crm" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Al Yalayis Portal</h3>
+                <span class="tech-badge bg-green-500/10 text-green-400 border border-green-500/20">Vue + ERP</span>
+              </div>
+              <p class="text-slate-400 font-medium">Comprehensive ERP modules and customer self-service portal for
+                government transactions.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Impact</div>
+                <div class="value">Operational Excellence</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: Selfdrive.ae -->
+          <div class="project-item project-card" data-category="travel crm" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Selfdrive.ae</h3>
+                <span class="tech-badge bg-blue-500/10 text-blue-400 border border-blue-500/20">Laravel</span>
+              </div>
+              <p class="text-slate-400 font-medium">Booking workflows, payments, and fleet management for a leading car
+                rental platform.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Role</div>
+                <div class="value">Full Stack Dev</div>
+              </div>
+              <a href="https://selfdrive.ae" target="_blank" class="footer-action">Visit Site</a>
+            </div>
+          </div>
+
+          <!-- Project: ChaseTask -->
+          <div class="project-item project-card" data-category="gamification" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">ChaseTask</h3>
+                <span class="tech-badge bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">Laravel +
+                  Vue</span>
+              </div>
+              <p class="text-slate-400 font-medium">Real-time gamified team-building web app for corporate events.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Tech</div>
+                <div class="value">Gamification</div>
+              </div>
+              <a href="https://chasetask.thegamearcade.com" target="_blank" class="footer-action">Live Demo</a>
+            </div>
+          </div>
+
+          <!-- Project: Progress File -->
+          <div class="project-item project-card" data-category="education crm" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Progress File</h3>
+                <span class="tech-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Full
+                  Stack</span>
+              </div>
+              <p class="text-slate-400 font-medium">Digital solution for training evaluations. Automated quiz valuation
+                and reporting.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Organization</div>
+                <div class="value">Select Training</div>
+              </div>
+              <a href="https://teambuilding-selecttraining.com/progressfile" target="_blank" class="footer-action">Live
+                Demo</a>
+            </div>
+          </div>
+
+          <!-- Project: BizTripz -->
+          <div class="project-item project-card" data-category="travel crm" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">BizTripz</h3>
+                <span class="tech-badge bg-sky-500/10 text-sky-400 border border-sky-500/20">B2B SaaS</span>
+              </div>
+              <p class="text-slate-400 font-medium">Corporate travel management platform handling complex booking
+                workflows.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Market</div>
+                <div class="value">India & Global</div>
+              </div>
+              <a href="https://biztripz.com" target="_blank" class="footer-action">Visit Site</a>
+            </div>
+          </div>
+
+          <!-- Project: EnjoyTrip -->
+          <div class="project-item project-card" data-category="travel" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">EnjoyTrip</h3>
+                <span class="tech-badge bg-pink-500/10 text-pink-400 border border-pink-500/20">Tourism</span>
+              </div>
+              <p class="text-slate-400 font-medium">Travel and tourism web platform for Uzbekistan market.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Client</div>
+                <div class="value">Uzbekistan Market</div>
+              </div>
+              <a href="https://enjoytrip.uz/" target="_blank" class="footer-action">Visit Site</a>
+            </div>
+          </div>
+
+          <!-- Project: GamePulse -->
+          <div class="project-item project-card" data-category="gamification crm" data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">GamePulse</h3>
+                <span class="tech-badge bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Laravel +
+                  Vue</span>
+              </div>
+              <p class="text-slate-400 font-medium">Real-time gamification platform for corporate team-building with
+                analytics.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Tech</div>
+                <div class="value">Real-time Events</div>
+              </div>
+              <a href="https://teambuilding-selecttraining.com/gamepulse" target="_blank" class="footer-action">Live
+                Demo</a>
+            </div>
+          </div>
+
+          <!-- Project: Begin With End -->
+          <div class="project-item project-card" data-category="gamification" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Begin With End</h3>
+                <span class="tech-badge bg-rose-500/10 text-rose-400 border border-rose-500/20">Platform</span>
+              </div>
+              <p class="text-slate-400 font-medium">Team-building game platform with scoring and QHSE check systems.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Impact</div>
+                <div class="value">Employee Engagement</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: Amal School -->
+          <div class="project-item project-card" data-category="education" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Amal School</h3>
+                <span class="tech-badge bg-blue-500/10 text-blue-400 border border-blue-500/20">EdTech</span>
+              </div>
+              <p class="text-slate-400 font-medium">Web platform for course management and student portals.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Sector</div>
+                <div class="value">Education</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: Credit Institute Careers -->
+          <div class="project-item project-card" data-category="education" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Credit Institute</h3>
+                <span class="tech-badge bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Web Portal</span>
+              </div>
+              <p class="text-slate-400 font-medium">Official careers portal for Credit Institute Recruitment.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Focus</div>
+                <div class="value">Recruitment</div>
+              </div>
+              <a href="https://careers.creditinstitute.org/" target="_blank" class="footer-action">Visit Site</a>
+            </div>
+          </div>
+
+          <!-- Project: Ansar Hospital -->
+          <div class="project-item project-card" data-category="healthcare" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Ansar Hospital</h3>
+                <span
+                  class="tech-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Healthcare</span>
+              </div>
+              <p class="text-slate-400 font-medium">Hospital management system for patient care and admin workflows.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Type</div>
+                <div class="value">Enterprise System</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: Medilife Tourism -->
+          <div class="project-item project-card" data-category="healthcare travel" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Medilife Tourism</h3>
+                <span class="tech-badge bg-teal-500/10 text-teal-400 border border-teal-500/20">Service</span>
+              </div>
+              <p class="text-slate-400 font-medium">Platform facilitating international patient travel and care.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Market</div>
+                <div class="value">Global Healthcare</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: CK Guppies -->
+          <div class="project-item project-card" data-category="ecommerce" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">CK Guppies</h3>
+                <span class="tech-badge bg-orange-500/10 text-orange-400 border border-orange-500/20">Shopify/Web</span>
+              </div>
+              <p class="text-slate-400 font-medium">Online marketplace for aquatic supplies and community.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Type</div>
+                <div class="value">E-Commerce</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: Gthub -->
+          <div class="project-item project-card" data-category="ecommerce" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Gthub</h3>
+                <span class="tech-badge bg-amber-500/10 text-amber-400 border border-amber-500/20">Laravel</span>
+              </div>
+              <p class="text-slate-400 font-medium">Robust platform designed for high-traffic product catalogs.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Impact</div>
+                <div class="value">Market Scalability</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: Peediyas -->
+          <div class="project-item project-card" data-category="crm" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Peediyas</h3>
+                <span class="tech-badge bg-purple-500/10 text-purple-400 border border-purple-500/20">SaaS</span>
+              </div>
+              <p class="text-slate-400 font-medium">Scalable SaaS for business efficiency and cloud management.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Target</div>
+                <div class="value">Business Admin</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: BE-Ice -->
+          <div class="project-item project-card" data-category="crm" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">BE-Ice</h3>
+                <span class="tech-badge bg-red-500/10 text-red-400 border border-red-500/20">CRM</span>
+              </div>
+              <p class="text-slate-400 font-medium">CRM system built with Laravel for streamlined data handling.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Impact</div>
+                <div class="value">Data Visualization</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: Lijan Insulation HRM -->
+          <div class="project-item project-card" data-category="crm" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Lijan HRM</h3>
+                <span class="tech-badge bg-pink-500/10 text-pink-400 border border-pink-500/20">Yii Framework</span>
+              </div>
+              <p class="text-slate-400 font-medium">Comprehensive HRM system for insulation industry operations.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Type</div>
+                <div class="value">Resource Mgmt</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: Peoples Foundation -->
+          <div class="project-item project-card" data-category="services" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Peoples Found.</h3>
+                <span class="tech-badge bg-green-500/10 text-green-400 border border-green-500/20">Non-Profit</span>
+              </div>
+              <p class="text-slate-400 font-medium">Fellowship management and digital outreach platforms.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Impact</div>
+                <div class="value">Social Good</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: FIMS -->
+          <div class="project-item project-card" data-category="crm" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">FIMS</h3>
+                <span class="tech-badge bg-slate-500/10 text-slate-400 border border-slate-500/20">Finance</span>
+              </div>
+              <p class="text-slate-400 font-medium">Financial Information Management System for large data sets.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Domain</div>
+                <div class="value">Financial Tech</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: Oman Times Quiz -->
+          <div class="project-item project-card" data-category="gamification" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Oman Times Quiz</h3>
+                <span class="tech-badge bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">Interactive</span>
+              </div>
+              <p class="text-slate-400 font-medium">Mass engagement quiz platform for leading publication.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Client</div>
+                <div class="value">Oman Times</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: Devlabz -->
+          <div class="project-item project-card" data-category="services" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Devlabz</h3>
+                <span class="tech-badge bg-sky-500/10 text-sky-400 border border-sky-500/20">Services</span>
+              </div>
+              <p class="text-slate-400 font-medium">Digital agency presence showcasing modern tech solutions.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Type</div>
+                <div class="value">Agency Portal</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+          <!-- Project: Devlabz Solutions -->
+          <div class="project-item project-card" data-category="services" data-aos="fade-up">
+            <div class="card-body">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold font-display text-white">Devlabz Sol.</h3>
+                <span class="tech-badge bg-sky-500/10 text-sky-400 border border-sky-500/20">Solutions</span>
+              </div>
+              <p class="text-slate-400 font-medium">Corporate solutions platform helping businesses scale via tech.</p>
+            </div>
+            <div class="card-footer">
+              <div class="space-y-1">
+                <div class="label">Type</div>
+                <div class="value">Enterprise SaaS</div>
+              </div>
+              <span class="footer-badge">Private</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-20 text-center" data-aos="fade-up">
+          <p class="text-slate-400 mb-6">Want to see more technical explorations?</p>
+          <a href="https://github.com" target="_blank"
+            class="inline-flex items-center gap-2 px-8 py-3 bg-white/5 border border-white/10 rounded-full font-semibold hover:bg-white/10 transition-all text-white group">
+            Github Repository <span class="group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-          <!-- Project 1 -->
-          <div
-            class="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col tilt-card"
-            data-aos="fade-up">
-            <div class="p-8 pb-0 flex-grow tilt-content">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold font-display text-slate-800">NFC Team Apps</h3>
-                <span
-                  class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider rounded-full">Flutter</span>
-              </div>
-              <p class="text-slate-600 mb-6 font-medium">
-                Event registration systems with NFC scoring and real-time leadership boards.
-              </p>
-            </div>
-            <div
-              class="bg-gradient-to-t from-slate-100 to-transparent p-8 pt-0 mt-4 flex items-end justify-between tilt-content">
-              <div class="space-y-1">
-                <div class="text-xs font-semibold text-slate-500 uppercase">Client</div>
-                <div class="font-medium text-slate-800">The Game Arcade</div>
-              </div>
-              <a href="https://nfc-admin.thegamearcade.com" target="_blank"
-                class="bg-white hover:bg-purple-600 hover:text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm transition-colors border border-slate-200 hover:border-transparent">
-                Live Demo
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div
-            class="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col tilt-card"
-            data-aos="fade-up" data-aos-delay="100">
-            <div class="p-8 pb-0 flex-grow tilt-content">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold font-display text-slate-800">Al Yalayis Portal</h3>
-                <span
-                  class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider rounded-full">Vue
-                  + ERP</span>
-              </div>
-              <p class="text-slate-600 mb-6 font-medium">
-                Comprehensive ERP modules and customer self-service portal for government transactions.
-              </p>
-            </div>
-            <div
-              class="bg-gradient-to-t from-slate-100 to-transparent p-8 pt-0 mt-4 flex items-end justify-between tilt-content">
-              <div class="space-y-1">
-                <div class="text-xs font-semibold text-slate-500 uppercase">Impact</div>
-                <div class="font-medium text-slate-800">Operational Efficiency</div>
-              </div>
-              <span class="bg-gray-100 text-gray-500 px-5 py-2.5 rounded-xl font-bold text-sm">
-                Private
-              </span>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div
-            class="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col tilt-card"
-            data-aos="fade-up">
-            <div class="p-8 pb-0 flex-grow tilt-content">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold font-display text-slate-800">Selfdrive.ae</h3>
-                <span
-                  class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider rounded-full">Laravel</span>
-              </div>
-              <p class="text-slate-600 mb-6 font-medium">
-                Booking workflows, payments, and fleet management for a leading car rental platform.
-              </p>
-            </div>
-            <div
-              class="bg-gradient-to-t from-slate-100 to-transparent p-8 pt-0 mt-4 flex items-end justify-between tilt-content">
-              <div class="space-y-1">
-                <div class="text-xs font-semibold text-slate-500 uppercase">Role</div>
-                <div class="font-medium text-slate-800">Full Stack Dev</div>
-              </div>
-              <a href="https://selfdrive.ae" target="_blank"
-                class="bg-white hover:bg-indigo-600 hover:text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm transition-colors border border-slate-200 hover:border-transparent">
-                Visit Site
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 4 -->
-          <div
-            class="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col tilt-card"
-            data-aos="fade-up" data-aos-delay="100">
-            <div class="p-8 pb-0 flex-grow tilt-content">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold font-display text-slate-800">ChaseTask</h3>
-                <span
-                  class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-bold uppercase tracking-wider rounded-full">Gamification</span>
-              </div>
-              <p class="text-slate-600 mb-6 font-medium">
-                Real-time gamified team-building web app for corporate events.
-              </p>
-            </div>
-            <div
-              class="bg-gradient-to-t from-slate-100 to-transparent p-8 pt-0 mt-4 flex items-end justify-between tilt-content">
-              <div class="space-y-1">
-                <div class="text-xs font-semibold text-slate-500 uppercase">Tech</div>
-                <div class="font-medium text-slate-800">Laravel & Vue</div>
-              </div>
-              <a href="https://chasetask.thegamearcade.com" target="_blank"
-                class="bg-white hover:bg-yellow-600 hover:text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm transition-colors border border-slate-200 hover:border-transparent">
-                Live Demo
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div
-            class="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col"
-            data-aos="fade-up" data-aos-delay="200">
-            <div class="p-8 pb-0 flex-grow">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold font-display text-slate-800">Progress File</h3>
-                <span
-                  class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider rounded-full">Automation</span>
-              </div>
-              <p class="text-slate-600 mb-6 font-medium">
-                End-to-end digital solution for training evaluations at Select Training. Automated quiz evaluation and
-                reporting.
-              </p>
-            </div>
-            <div class="bg-gradient-to-t from-slate-100 to-transparent p-8 pt-0 mt-4 flex items-end justify-between">
-              <div class="space-y-1">
-                <div class="text-xs font-semibold text-slate-500 uppercase">Tech</div>
-                <div class="font-medium text-slate-800">Full Stack</div>
-              </div>
-              <a href="https://teambuilding-selecttraining.com/progressfile" target="_blank"
-                class="bg-white hover:bg-green-600 hover:text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm transition-colors border border-slate-200 hover:border-transparent">
-                Live Demo
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div
-            class="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col"
-            data-aos="fade-up" data-aos-delay="0">
-            <div class="p-8 pb-0 flex-grow">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold font-display text-slate-800">BizTripz</h3>
-                <span
-                  class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">B2B
-                  Travel</span>
-              </div>
-              <p class="text-slate-600 mb-6 font-medium">
-                Corporate travel management platform. Scaled backend services to handle large data sets.
-              </p>
-            </div>
-            <div class="bg-gradient-to-t from-slate-100 to-transparent p-8 pt-0 mt-4 flex items-end justify-between">
-              <div class="space-y-1">
-                <div class="text-xs font-semibold text-slate-500 uppercase">Role</div>
-                <div class="font-medium text-slate-800">Full Stack</div>
-              </div>
-              <a href="https://biztripz.com" target="_blank"
-                class="bg-white hover:bg-blue-600 hover:text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm transition-colors border border-slate-200 hover:border-transparent">
-                Visit Site
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 7 -->
-          <div
-            class="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col"
-            data-aos="fade-up" data-aos-delay="100">
-            <div class="p-8 pb-0 flex-grow">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold font-display text-slate-800">EnjoyTrip</h3>
-                <span
-                  class="px-3 py-1 bg-pink-100 text-pink-700 text-xs font-bold uppercase tracking-wider rounded-full">Tourism</span>
-              </div>
-              <p class="text-slate-600 mb-6 font-medium">
-                Travel and tourism web platform for Uzbekistan market.
-              </p>
-            </div>
-            <div class="bg-gradient-to-t from-slate-100 to-transparent p-8 pt-0 mt-4 flex items-end justify-between">
-              <div class="space-y-1">
-                <div class="text-xs font-semibold text-slate-500 uppercase">Client</div>
-                <div class="font-medium text-slate-800">Uzbekistan</div>
-              </div>
-              <a href="https://enjoytrip.uz/" target="_blank"
-                class="bg-white hover:bg-pink-600 hover:text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm transition-colors border border-slate-200 hover:border-transparent">
-                Visit Site
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 8 -->
-          <div
-            class="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col"
-            data-aos="fade-up" data-aos-delay="200">
-            <div class="p-8 pb-0 flex-grow">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold font-display text-slate-800">GamePulse</h3>
-                <span
-                  class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-bold uppercase tracking-wider rounded-full">Gamification</span>
-              </div>
-              <p class="text-slate-600 mb-6 font-medium">
-                Real-time gamification platform for corporate team-building with leaderboards and analytics.
-              </p>
-            </div>
-            <div class="bg-gradient-to-t from-slate-100 to-transparent p-8 pt-0 mt-4 flex items-end justify-between">
-              <div class="space-y-1">
-                <div class="text-xs font-semibold text-slate-500 uppercase">Tech</div>
-                <div class="font-medium text-slate-800">Laravel + Vue</div>
-              </div>
-              <a href="https://teambuilding-selecttraining.com/gamepulse" target="_blank"
-                class="bg-white hover:bg-yellow-600 hover:text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm transition-colors border border-slate-200 hover:border-transparent">
-                Live Demo
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 9 -->
-          <div
-            class="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col"
-            data-aos="fade-up" data-aos-delay="0">
-            <div class="p-8 pb-0 flex-grow">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold font-display text-slate-800">Begin With End</h3>
-                <span
-                  class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider rounded-full">Team
-                  Building</span>
-              </div>
-              <p class="text-slate-600 mb-6 font-medium">
-                Team-building game platform with real-time scoring, QHSE checks, and leaderboards.
-              </p>
-            </div>
-            <div class="bg-gradient-to-t from-slate-100 to-transparent p-8 pt-0 mt-4 flex items-end justify-between">
-              <div class="space-y-1">
-                <div class="text-xs font-semibold text-slate-500 uppercase">Impact</div>
-                <div class="font-medium text-slate-800">Engagement</div>
-              </div>
-              <span class="bg-gray-100 text-gray-500 px-5 py-2.5 rounded-xl font-bold text-sm">
-                Private
-              </span>
-            </div>
-          </div>
-
-          <!-- Project 10 -->
-          <div
-            class="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col"
-            data-aos="fade-up" data-aos-delay="100">
-            <div class="p-8 pb-0 flex-grow">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold font-display text-slate-800">Amal School</h3>
-                <span
-                  class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">EdTech</span>
-              </div>
-              <p class="text-slate-600 mb-6 font-medium">
-                Web platform for course management, user portals, and content delivery.
-              </p>
-            </div>
-            <div class="bg-gradient-to-t from-slate-100 to-transparent p-8 pt-0 mt-4 flex items-end justify-between">
-              <div class="space-y-1">
-                <div class="text-xs font-semibold text-slate-500 uppercase">Tech</div>
-                <div class="font-medium text-slate-800">Web Platform</div>
-              </div>
-              <span class="bg-gray-100 text-gray-500 px-5 py-2.5 rounded-xl font-bold text-sm">
-                Private
-              </span>
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
 
     <!-- Experience Timeline -->
-    <section class="py-24 bg-slate-50 border-t border-slate-200">
+    <section class="py-24 relative border-t border-slate-800">
       <div class="max-w-4xl mx-auto px-6">
-        <h2 class="font-display text-3xl font-bold text-center mb-16" data-aos="fade-up">My Journey</h2>
+        <h2 class="font-display text-3xl font-bold text-center mb-16 text-white" data-aos="fade-up">My Journey</h2>
 
         <div
-          class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+          class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
 
           <!-- Job 1 -->
           <div
             class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
             data-aos="fade-up">
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-indigo-500 text-slate-500 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-800 group-[.is-active]:bg-indigo-600 text-slate-400 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
               <svg class="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
               </svg>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-800 hover:shadow-md transition-shadow hover:border-indigo-500/30">
               <div class="flex justify-between items-center mb-1">
-                <h3 class="font-bold text-slate-800">Software Developer</h3>
-                <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Current</span>
+                <h3 class="font-bold text-white">Software Developer</h3>
+                <span
+                  class="text-xs font-semibold text-indigo-300 bg-indigo-500/10 px-2 py-1 rounded border border-indigo-500/20">Current</span>
               </div>
-              <div class="text-sm text-slate-500 mb-4">Select Training & Mgmt • Feb 2025 - Present</div>
-              <p class="text-slate-600 text-sm">Delivering complete solutions across web, mobile, and desktop using
+              <div class="text-sm text-slate-400 mb-4">Select Training & Mgmt • Feb 2025 - Present</div>
+              <p class="text-slate-400 text-sm">Delivering complete solutions across web, mobile, and desktop using
                 Laravel, Vue.js, and Flutter.</p>
             </div>
           </div>
@@ -589,17 +778,17 @@
           <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
             data-aos="fade-up">
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-white text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-900 text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
               <span class="text-xs font-bold">2</span>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-800 hover:shadow-md transition-shadow hover:border-slate-700">
               <div class="flex justify-between items-center mb-1">
-                <h3 class="font-bold text-slate-800">Software Developer</h3>
-                <span class="text-xs text-slate-400">2024 - 2025</span>
+                <h3 class="font-bold text-white">Software Developer</h3>
+                <span class="text-xs text-slate-500">2024 - 2025</span>
               </div>
-              <div class="text-sm text-slate-500 mb-4">Selfdrive.ae • UAE</div>
-              <p class="text-slate-600 text-sm">Built scalable APIs, mobile apps, and dashboards for the fleet
+              <div class="text-sm text-slate-400 mb-4">Selfdrive.ae • UAE</div>
+              <p class="text-slate-400 text-sm">Built scalable APIs, mobile apps, and dashboards for the fleet
                 management system.</p>
             </div>
           </div>
@@ -608,17 +797,17 @@
           <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
             data-aos="fade-up">
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-white text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-900 text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
               <span class="text-xs font-bold">3</span>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-800 hover:shadow-md transition-shadow hover:border-slate-700">
               <div class="flex justify-between items-center mb-1">
-                <h3 class="font-bold text-slate-800">Full Stack Engineer</h3>
-                <span class="text-xs text-slate-400">2023 - 2024</span>
+                <h3 class="font-bold text-white">Full Stack Engineer</h3>
+                <span class="text-xs text-slate-500">2023 - 2024</span>
               </div>
-              <div class="text-sm text-slate-500 mb-4">Al Yalayis • Dubai</div>
-              <p class="text-slate-600 text-sm">Developed ERP modules and customer self-service portals.</p>
+              <div class="text-sm text-slate-400 mb-4">Al Yalayis • Dubai</div>
+              <p class="text-slate-400 text-sm">Developed ERP modules and customer self-service portals.</p>
             </div>
           </div>
 
@@ -626,17 +815,17 @@
           <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
             data-aos="fade-up">
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-white text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-900 text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
               <span class="text-xs font-bold">4</span>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-800 hover:shadow-md transition-shadow hover:border-slate-700">
               <div class="flex justify-between items-center mb-1">
-                <h3 class="font-bold text-slate-800">Full Stack Engineer</h3>
-                <span class="text-xs text-slate-400">2022 - 2023</span>
+                <h3 class="font-bold text-white">Full Stack Engineer</h3>
+                <span class="text-xs text-slate-500">2022 - 2023</span>
               </div>
-              <div class="text-sm text-slate-500 mb-4">BizTripz Solutions • Kerala (Remote)</div>
-              <p class="text-slate-600 text-sm">Delivered travel & business solutions with Agile methodology. Mentored
+              <div class="text-sm text-slate-400 mb-4">BizTripz Solutions • Kerala (Remote)</div>
+              <p class="text-slate-400 text-sm">Delivered travel & business solutions with Agile methodology. Mentored
                 junior developers and introduced automated testing.</p>
             </div>
           </div>
@@ -645,17 +834,17 @@
           <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
             data-aos="fade-up">
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-white text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-900 text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
               <span class="text-xs font-bold">5</span>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-800 hover:shadow-md transition-shadow hover:border-slate-700">
               <div class="flex justify-between items-center mb-1">
-                <h3 class="font-bold text-slate-800">Full Stack Engineer</h3>
-                <span class="text-xs text-slate-400">2020 - 2022</span>
+                <h3 class="font-bold text-white">Full Stack Engineer</h3>
+                <span class="text-xs text-slate-500">2020 - 2022</span>
               </div>
-              <div class="text-sm text-slate-500 mb-4">signrOots Technologies</div>
-              <p class="text-slate-600 text-sm">Maintained CodeIgniter, Laravel, Django, flask projects. Optimized
+              <div class="text-sm text-slate-400 mb-4">signrOots Technologies</div>
+              <p class="text-slate-400 text-sm">Maintained CodeIgniter, Laravel, Django, flask projects. Optimized
                 Ubuntu Server hosting.</p>
             </div>
           </div>
@@ -664,17 +853,17 @@
           <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
             data-aos="fade-up">
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-white text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-900 text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
               <span class="text-xs font-bold">6</span>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-800 hover:shadow-md transition-shadow hover:border-slate-700">
               <div class="flex justify-between items-center mb-1">
-                <h3 class="font-bold text-slate-800">Teacher (Software Dev)</h3>
-                <span class="text-xs text-slate-400">2019 - 2020</span>
+                <h3 class="font-bold text-white">Teacher (Software Dev)</h3>
+                <span class="text-xs text-slate-500">2019 - 2020</span>
               </div>
-              <div class="text-sm text-slate-500 mb-4">G-TEC Computer Education</div>
-              <p class="text-slate-600 text-sm">Taught Java, Python, PHP, C++. Guided students in building real
+              <div class="text-sm text-slate-400 mb-4">G-TEC Computer Education</div>
+              <p class="text-slate-400 text-sm">Taught Java, Python, PHP, C++. Guided students in building real
                 applications.</p>
             </div>
           </div>
@@ -684,53 +873,53 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-24 bg-white relative overflow-hidden">
+    <section class="py-24 relative overflow-hidden">
       <!-- Decorative blob -->
       <div
-        class="absolute top-0 right-0 w-64 h-64 bg-indigo-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 -z-10">
+        class="absolute top-0 right-0 w-64 h-64 bg-indigo-600/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 -z-10">
       </div>
 
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="font-display text-4xl font-bold text-center mb-16">Trusted by Leaders</h2>
+        <h2 class="font-display text-4xl font-bold text-center mb-16 text-white">Trusted by Leaders</h2>
 
         <div class="grid md:grid-cols-2 gap-8">
           <!-- Testimonial 1 -->
           <div
-            class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex gap-6 items-center hover:bg-white hover:shadow-xl transition-all duration-300"
+            class="bg-slate-900 p-8 rounded-3xl border border-slate-800 flex gap-6 items-center hover:bg-slate-800 hover:shadow-xl transition-all duration-300"
             data-aos="fade-right">
             <img src="./t1.jpeg" alt="CEO Testimonial"
-              class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
+              class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-slate-700 flex-shrink-0">
             <div>
-              <div class="text-indigo-600 mb-2">
+              <div class="text-indigo-400 mb-2">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M14.017 21L14.017 18C14.017 16.0547 15.592 14.4793 17.5373 14.4793H19.952V10.1507C19.952 10.1507 14.017 10.1507 14.017 10.1507C14.017 5.758 17.5373 2.15 21.952 2.15V4.65C18.948 4.65 16.517 7.08133 16.517 10.0853V10.75H19.952C21.0567 10.75 21.952 11.6453 21.952 12.75V19C21.952 20.1047 21.0567 21 19.952 21H14.017ZM8.01733 21L8.01733 18C8.01733 16.0547 9.592 14.4793 11.5373 14.4793H13.952V10.1507C13.952 10.1507 8.01733 10.1507 8.01733 10.1507C8.01733 5.758 11.5373 2.15 15.952 2.15V4.65C12.948 4.65 10.5173 7.08133 10.5173 10.0853V10.75H13.952C15.0567 10.75 15.952 11.6453 15.952 12.75V19C15.952 20.1047 15.0567 21 13.952 21H8.01733Z"
                     transform="translate(-8 -2)" />
                 </svg>
               </div>
-              <p class="text-slate-700 italic text-sm mb-3">"Expert delivery on our core infrastructure. Highly
+              <p class="text-slate-300 italic text-sm mb-3">"Expert delivery on our core infrastructure. Highly
                 recommended."</p>
-              <p class="font-bold text-slate-900 text-sm">- CEO</p>
+              <p class="font-bold text-white text-sm">- CEO</p>
             </div>
           </div>
 
           <!-- Testimonial 2 -->
           <div
-            class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex gap-6 items-center hover:bg-white hover:shadow-xl transition-all duration-300"
+            class="bg-slate-900 p-8 rounded-3xl border border-slate-800 flex gap-6 items-center hover:bg-slate-800 hover:shadow-xl transition-all duration-300"
             data-aos="fade-left">
             <img src="./t2.jpeg" alt="CEO Testimonial"
-              class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
+              class="w-24 h-24 rounded-full object-cover shadow-md border-2 border-slate-700 flex-shrink-0">
             <div>
-              <div class="text-indigo-600 mb-2">
+              <div class="text-indigo-400 mb-2">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M14.017 21L14.017 18C14.017 16.0547 15.592 14.4793 17.5373 14.4793H19.952V10.1507C19.952 10.1507 14.017 10.1507 14.017 10.1507C14.017 5.758 17.5373 2.15 21.952 2.15V4.65C18.948 4.65 16.517 7.08133 16.517 10.0853V10.75H19.952C21.0567 10.75 21.952 11.6453 21.952 12.75V19C21.952 20.1047 21.0567 21 19.952 21H14.017ZM8.01733 21L8.01733 18C8.01733 16.0547 9.592 14.4793 11.5373 14.4793H13.952V10.1507C13.952 10.1507 8.01733 10.1507 8.01733 10.1507C8.01733 5.758 11.5373 2.15 15.952 2.15V4.65C12.948 4.65 10.5173 7.08133 10.5173 10.0853V10.75H13.952C15.0567 10.75 15.952 11.6453 15.952 12.75V19C15.952 20.1047 15.0567 21 13.952 21H8.01733Z"
                     transform="translate(-8 -2)" />
                 </svg>
               </div>
-              <p class="text-slate-700 italic text-sm mb-3">"Transformed our digital workflow with exceptional speed."
+              <p class="text-slate-300 italic text-sm mb-3">"Transformed our digital workflow with exceptional speed."
               </p>
-              <p class="font-bold text-slate-900 text-sm">- CEO</p>
+              <p class="font-bold text-white text-sm">- CEO</p>
             </div>
           </div>
         </div>
@@ -738,7 +927,8 @@
     </section>
 
     <!-- Call to Action -->
-    <section id="contact" class="py-24 bg-slate-900 text-white relative isolate overflow-hidden">
+    <section id="contact"
+      class="py-24 bg-slate-950 text-white relative isolate overflow-hidden border-t border-slate-800">
       <!-- Glow effects -->
       <div class="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 rounded-full bg-indigo-600/30 blur-3xl -z-10"></div>
       <div class="absolute bottom-0 left-0 -ml-24 -mb-24 w-96 h-96 rounded-full bg-pink-600/20 blur-3xl -z-10"></div>
@@ -751,7 +941,7 @@
         </p>
         <div class="flex flex-col sm:flex-row gap-6 justify-center">
           <a href="mailto:shabi.developer@gmail.com"
-            class="px-8 py-4 bg-white text-slate-900 rounded-full font-bold text-lg hover:bg-indigo-50 transition-colors shadow-lg shadow-white/10">
+            class="px-8 py-4 bg-indigo-600 text-white rounded-full font-bold text-lg hover:bg-indigo-500 transition-colors shadow-lg shadow-indigo-600/30">
             shabi.developer@gmail.com
           </a>
           <div class="flex gap-4 justify-center items-center">

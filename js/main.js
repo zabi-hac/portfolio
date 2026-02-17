@@ -101,9 +101,49 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Add hover effect
-        document.querySelectorAll('a, button').forEach(el => {
+        document.querySelectorAll('a, button, .filter-btn').forEach(el => {
             el.addEventListener('mouseenter', () => cursorOutline.classList.add('scale-150', 'bg-indigo-100/20'));
             el.addEventListener('mouseleave', () => cursorOutline.classList.remove('scale-150', 'bg-indigo-100/20'));
         });
     }
+
+    // Project Filtering
+    initProjectFilter();
 });
+
+function initProjectFilter() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    if (!filterBtns.length) return;
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add to clicked
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            projectItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+
+                // Allow comma separated categories in data-category
+                if (filterValue === 'all' || category.includes(filterValue)) {
+                    item.classList.remove('hidden');
+                    item.classList.add('show');
+                    // Re-trigger AOS if needed or let CSS handle it
+                } else {
+                    item.classList.add('hidden');
+                    item.classList.remove('show');
+                }
+            });
+
+            // Re-layout/refresh AOS
+            setTimeout(() => {
+                AOS.refresh();
+            }, 600);
+        });
+    });
+}
